@@ -1,0 +1,659 @@
+{
+	"info": {
+		"_postman_id": "8533e481-08d6-4348-8473-4f959f627ba7",
+		"name": "Voting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"zhengying\",\r\n  \"alias\": \"crystal\",\r\n  \"emailAddress\": \"zhengying@crystal.com\",\r\n  \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/register",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"emailAddress\": \"shizheng@hou.com\",\r\n  \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/users/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Anonymous user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk5MzI2ZjgxMmU3N2ViOTg2YmM4YTUiLCJpYXQiOjE2Mzc0MzAwNzksImV4cCI6MTYzNzQzMDEzOX0.dYTCafaOICpbRd7SlvA-WZnta2Y3HIUOYu-O5XMfbWo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/unregisters/autoGenerate",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"unregisters",
+								"autoGenerate"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Topic",
+			"item": [
+				{
+					"name": "Creat topic",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"topicContent\": \"Multi-column Hello 2\",\r\n  \"isAnonymous\": true,\r\n  \"numberColumn\": 2,\r\n  \"maxLikePerUser\": 2,\r\n  \"oneLikePerIdea\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/topics",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"topics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get topics",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk3ZWQ4ODM1Yzg3OTdlMTA4NGZjOWUiLCJpYXQiOjE2Mzc0OTY4NjIsImV4cCI6MTYzNzU4MzI2Mn0.gMmkzeLR-2y_1HWOH8RH2bgMXA2JKp0yIIn-8gd04PM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/topics",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"topics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update topic",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk3ZWQ4ODM1Yzg3OTdlMTA4NGZjOWUiLCJpYXQiOjE2MzczODEwMDcsImV4cCI6MTYzNzQ2NzQwN30.AXuwyrdaPZbBnaZnjiqNDmtAxdvTdmTJPEj_2Z01rIM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"topicId\": \"6197f6ab1102700e19d05249\",\r\n  \"topicContent\": \"HelloUpdated2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/topics",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"topics"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete topic",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk3ZWQ4ODM1Yzg3OTdlMTA4NGZjOWUiLCJpYXQiOjE2MzczODEwMDcsImV4cCI6MTYzNzQ2NzQwN30.AXuwyrdaPZbBnaZnjiqNDmtAxdvTdmTJPEj_2Z01rIM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/topics/619874045af23b49300cc63b",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"topics",
+								"619874045af23b49300cc63b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get topic",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk3ZWQ4ODM1Yzg3OTdlMTA4NGZjOWUiLCJpYXQiOjE2Mzc0OTY4NjIsImV4cCI6MTYzNzU4MzI2Mn0.gMmkzeLR-2y_1HWOH8RH2bgMXA2JKp0yIIn-8gd04PM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/topics/61986544b4f2635ed8c48b00",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"topics",
+								"61986544b4f2635ed8c48b00"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk4NjQ5NGI0ZjI2MzVlZDhjNDhhZjMiLCJpYXQiOjE2Mzc0ODkyNzIsImV4cCI6MTYzNzU3NTY3Mn0.zRX9QW1PRDKKSrnAdxQG9L7wgvwRVrtzYqouAvCcBzM",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Column",
+			"item": [
+				{
+					"name": "Create column",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk3ZWQ4ODM1Yzg3OTdlMTA4NGZjOWUiLCJpYXQiOjE2MzczODEwMDcsImV4cCI6MTYzNzQ2NzQwN30.AXuwyrdaPZbBnaZnjiqNDmtAxdvTdmTJPEj_2Z01rIM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"columnName\": \"Sample column2\",\r\n  \"topicId\": \"61986544b4f2635ed8c48b00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/column",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"column"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update column",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"columnId\": \"6198c8b19349c1dbf8789dc5\",\r\n  \"columnName\": \"Sample column2 updated\",\r\n  \"topicId\": \"61986544b4f2635ed8c48b00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/column",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"column"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete column",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/column/6198c8b19349c1dbf8789dc5",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"column",
+								"6198c8b19349c1dbf8789dc5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get columns",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/column/61986544b4f2635ed8c48b00",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"column",
+								"61986544b4f2635ed8c48b00"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk3ZWQ4ODM1Yzg3OTdlMTA4NGZjOWUiLCJpYXQiOjE2MzczODEwMDcsImV4cCI6MTYzNzQ2NzQwN30.AXuwyrdaPZbBnaZnjiqNDmtAxdvTdmTJPEj_2Z01rIM",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Idea",
+			"item": [
+				{
+					"name": "Create idea",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"Idea 5 🤣\",\r\n  \"topicId\": \"6199bd68bef11f459cb60a2a\",\r\n  \"columnId\": \"6199bd68bef11f459cb60a30\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ideas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ideas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update idea",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ideaId\": \"6198f652bd58c0d3141b1346\",\r\n  \"description\": \"Idea 3 updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ideas",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ideas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete idea",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/ideas/6198f652bd58c0d3141b1346",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ideas",
+								"6198f652bd58c0d3141b1346"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Move idea",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"ideaId\": \"6198f6066d2c08a5ec6cef59\",\r\n  \"columnId\": \"6198ce7724d476476095e57c\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/ideas/column",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"ideas",
+								"column"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk3ZWQ4ODM1Yzg3OTdlMTA4NGZjOWUiLCJpYXQiOjE2Mzc0Njc3NjQsImV4cCI6MTYzNzU1NDE2NH0.hFV34p-a7p3cK3EwhrokLd2HB6VH6aCnau15i-87Fhw",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Like",
+			"item": [
+				{
+					"name": "Add like",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"columnId\": \"6199bd68bef11f459cb60a2d\",\r\n  \"ideaId\": \"6199c6a87a9a8432598142bd\",\r\n  \"topicId\": \"6199bd68bef11f459cb60a2a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/likes",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"likes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete like",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/likes/619a13df543bb4e748cd038a",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"likes",
+								"619a13df543bb4e748cd038a"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk4NjQ5NGI0ZjI2MzVlZDhjNDhhZjMiLCJpYXQiOjE2Mzc0ODgyOTQsImV4cCI6MTYzNzU3NDY5NH0.vliTka7HgPw8-zGHc0vtMyqKMdvXrxvETLGPr05C5UU",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MTk3ZWQ4ODM1Yzg3OTdlMTA4NGZjOWUiLCJpYXQiOjE2MzczODEwMDcsImV4cCI6MTYzNzQ2NzQwN30.AXuwyrdaPZbBnaZnjiqNDmtAxdvTdmTJPEj_2Z01rIM",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "localhost:6000/api"
+		}
+	]
+}

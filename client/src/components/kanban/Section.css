@@ -1,0 +1,23 @@
+.section-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 12px;
+}
+
+.section-container .card-item-list {
+  flex: 1;
+}
+
+.section-container .section-title {
+  display: flex;
+  justify-content: space-between;
+  height: 76px;
+}
+
+.section-container .section-title .section-title-edit {
+  cursor: pointer;
+}
+
+.column-direction-vertical .section-container .card-item-list {
+  flex-basis: 700px;
+}

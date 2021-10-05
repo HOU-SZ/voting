@@ -1,0 +1,32 @@
+.idea-container {
+  display: flex;
+  flex-direction: column;
+  margin: 12px 0;
+  overflow: inherit;
+  max-width: inherit;
+}
+
+.tds-form-input-wrap {
+  --tds-form-input--border-color: hsl(210, 2%, 82%);
+}
+
+.idea-content-wrapper {
+  display: flex;
+}
+
+.idea-content-wrapper .idea-content {
+  flex: 1;
+}
+
+.idea-like-controller,
+.idea-edit-control {
+  display: flex;
+}
+
+.idea-edit-control {
+  justify-content: flex-end;
+}
+
+.likeCount {
+  margin-bottom: 10px;
+}

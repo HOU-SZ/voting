@@ -1,0 +1,190 @@
+{
+    "topicId": 18,
+    "topicContent": "IT5007",
+    "isAnonymous": true,
+    "numberColumn": 3,
+    "maxLikePerUser": 4,
+    "oneLikePerIdea": false,
+    "editable": true,
+    "topicColumns": [
+        {
+            "columnId": 71,
+            "columnName": "To do",
+            "topicId": 18,
+            "editable": true,
+            "columnIdeas": [
+                {
+                    "ideaId": 93,
+                    "description": "basic framework🤣",
+                    "topicId": 18,
+                    "columnId": 71,
+                    "editable": true,
+                    "likeable": false,
+                    "haveLiked": [],
+                    "likeCount": 1,
+                    "ideaLikes": [
+                        {
+                            "likeId": 203
+                        }
+                    ],
+                    "createdAt": "2021-09-05T21:08:03",
+                    "updatedAt": "2021-10-05T23:08:25",
+                    "isRemove": false
+                },
+                {
+                    "ideaId": 96,
+                    "description": "anonymous user LALALA",
+                    "topicId": 18,
+                    "columnId": 71,
+                    "editable": true,
+                    "likeable": false,
+                    "haveLiked": null,
+                    "likeCount": 0,
+                    "ideaLikes": null,
+                    "createdAt": "2021-09-05T21:08:56",
+                    "updatedAt": "2021-09-06T13:36:19",
+                    "isRemove": false
+                },
+                {
+                    "ideaId": 98,
+                    "description": "let us figure out some new ideas",
+                    "topicId": 18,
+                    "columnId": 71,
+                    "editable": true,
+                    "likeable": false,
+                    "haveLiked": null,
+                    "likeCount": 0,
+                    "ideaLikes": null,
+                    "createdAt": "2021-09-05T21:15:51",
+                    "updatedAt": "2021-09-05T21:15:51",
+                    "isRemove": false
+                }
+            ],
+            "createdAt": "2021-09-05T21:04:46",
+            "updatedAt": "2021-10-05T17:29:05",
+            "isRemove": false
+        },
+        {
+            "columnId": 72,
+            "columnName": "Done",
+            "topicId": 18,
+            "editable": true,
+            "columnIdeas": [
+                {
+                    "ideaId": 94,
+                    "description": "user login🤩",
+                    "topicId": 18,
+                    "columnId": 72,
+                    "editable": true,
+                    "likeable": false,
+                    "haveLiked": [
+                        {
+                            "likeId": 391
+                        }
+                    ],
+                    "likeCount": 3,
+                    "ideaLikes": [
+                        {
+                            "likeId": 194
+                        },
+                        {
+                            "likeId": 202
+                        },
+                        {
+                            "likeId": 391
+                        }
+                    ],
+                    "createdAt": "2021-09-05T21:08:23",
+                    "updatedAt": "2021-10-05T23:08:48",
+                    "isRemove": false
+                },
+                {
+                    "ideaId": 97,
+                    "description": "let us figure out some new ideas lalala",
+                    "topicId": 18,
+                    "columnId": 72,
+                    "editable": true,
+                    "likeable": false,
+                    "haveLiked": [],
+                    "likeCount": 2,
+                    "ideaLikes": [
+                        {
+                            "likeId": 192
+                        },
+                        {
+                            "likeId": 390
+                        }
+                    ],
+                    "createdAt": "2021-09-05T21:15:50",
+                    "updatedAt": "2021-09-08T11:42:21",
+                    "isRemove": false
+                }
+            ],
+            "createdAt": "2021-09-05T21:04:47",
+            "updatedAt": "2021-09-05T21:08:02",
+            "isRemove": false
+        },
+        {
+            "columnId": 73,
+            "columnName": "not well",
+            "topicId": 18,
+            "editable": true,
+            "columnIdeas": [
+                {
+                    "ideaId": 95,
+                    "description": "add topic😝",
+                    "topicId": 18,
+                    "columnId": 73,
+                    "editable": true,
+                    "likeable": false,
+                    "haveLiked": [
+                        {
+                            "likeId": 306
+                        },
+                        {
+                            "likeId": 311
+                        },
+                        {
+                            "likeId": 322
+                        }
+                    ],
+                    "likeCount": 3,
+                    "ideaLikes": [
+                        {
+                            "likeId": 306
+                        },
+                        {
+                            "likeId": 311
+                        },
+                        {
+                            "likeId": 322
+                        }
+                    ],
+                    "createdAt": "2021-09-05T21:08:37",
+                    "updatedAt": "2021-10-05T23:09:21",
+                    "isRemove": false
+                },
+                {
+                    "ideaId": 101,
+                    "description": "let us figure out some new ideas",
+                    "topicId": 18,
+                    "columnId": 73,
+                    "editable": true,
+                    "likeable": false,
+                    "haveLiked": null,
+                    "likeCount": 0,
+                    "ideaLikes": null,
+                    "createdAt": "2021-09-06T17:07:27",
+                    "updatedAt": "2021-09-06T17:07:27",
+                    "isRemove": false
+                }
+            ],
+            "createdAt": "2021-09-05T21:14:27",
+            "updatedAt": "2021-09-05T21:14:44",
+            "isRemove": false
+        }
+    ],
+    "createdAt": "2021-09-05T21:04:46",
+    "updatedAt": "2021-09-06T14:12:50",
+    "isRemove": false
+}

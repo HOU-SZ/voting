@@ -1,0 +1,21 @@
+.title {
+  text-align: center;
+  padding: 10px;
+}
+
+.container {
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+}
+
+.align-left {
+  float: left;
+  margin-left: 0px;
+}
+
+.align-right {
+  float: right;
+  margin-right: 10px;
+}

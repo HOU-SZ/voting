@@ -1,0 +1,15 @@
+.layout-column {
+  display: flex;
+}
+
+.layout-column > div {
+  flex: 1;
+}
+
+.column-direction-vertical {
+  flex-direction: row;
+}
+
+.column-direction-horizon {
+  flex-direction: column;
+}
